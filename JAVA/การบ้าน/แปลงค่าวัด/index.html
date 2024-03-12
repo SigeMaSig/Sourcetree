@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stl.css">
+    <title>Document</title>
+</head>
+<body>
+  <!--  <div class="container"></div>
+    <div>
+        <input class="input" required>
+    </div>  -->
+    <section name="option" id="from">
+        <h1>แปลงค่าหน่วยวัด</h1>
+        <div id="UnitForm">
+            <label for="amount">ใส่ค่าของคุณ:</label>
+            <input type="number" id="amount" required><br><br>
+            <label for="fromUnit">เลือกหน่อยที่จะแปลง:</label>
+            <select id="fromUnit" name="fromUnit" required >
+            <option value="">กรุณาเลือกหน่วยที่ต้องการแปลง</option>
+            <option value="cm">เซนติเมตร</option>
+            <option value="inch">นิ้ว</option>
+            <option value="m">เมตร</option>
+            <option value="km">กิโลเมตร</option>
+            </select>
+    <br><br>
+            <label for="toUnit">ค่าที่คุณต้องการแปลง:</label>
+            <select id="toUnit" name="toUnit" required >
+                <option value="">กรุณาเลือกหน่วยที่ต้องการแปลง</option>
+                <option value="cm">เซนติเมตร</option>
+                <option value="inch">นิ้ว</option>
+                <option value="m">เมตร</option>
+                <option value="km">กิโลเมตร</option>
+            </select>
+            <br><br>
+            <label>ผลการแปลง:</label>
+            <input class ="result" type="text" id="output" disabled><br>
+            <button type="button" onclick='exchange(parseFloat(document.getElementById("amount").value))'>หน่วยวัด</button><br><br>
+            <pre> </pre>    
+        </div>
+    </section>
+    <script src="app2.js"></script>
+</body>
+</html>

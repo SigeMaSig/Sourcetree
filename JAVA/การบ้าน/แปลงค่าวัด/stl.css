@@ -1,0 +1,43 @@
+body{
+    font-family: arial;
+    font-size: 30px;
+    margin: 0;
+    background: #ffd684;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.input {
+position: absolute;
+width: 389px;
+height: 46.39px;
+left: 162.1px;
+top: 404.2px;
+
+background: #FEFEFE;
+border-radius: 10px;
+}
+
+.container{
+position: absolute;
+width: 433px;
+height: 92.79px;
+left: 142px;
+top: 381px;
+
+background: #FFF1D5;
+border-radius: 10px;
+}
+
+.metrics_button{
+
+position: absolute;
+width: 100.52px;
+height: 46.39px;
+left: 457.47px;
+top: 404.2px;
+
+}
