@@ -19,7 +19,7 @@ const bmiarray = {
 function HolyShit(){
 bmiarray.input(document.getElementById("weight").value);
 bmiarray.input(document.getElementById("height").value);
-const total = bmiarray.calculateBMI();
+const total = bmiarray.SumBMI();
 document.getElementById("output").value = total
 bmiarray.values = []
 }
