@@ -18,11 +18,24 @@ m-m เรียกว่า Weak Entity
 การเพิ่มข้อมูลในตาราง
 1.การเตรียมข้อมูล
 2.ใช้ INSERT ใช้เพิ่มข้อมูลลงในตาราง
+INSERT INTO customers 
+VALUES (60,"Chachapon","Keecharoen",NULL,"HOME","Bankkok",NULL,"Thatland"
+10160,0960166341,NULL,"someting@gmail.com",NULL); ไม่นิยมใช้ ไล่ตามข้อมูลจากซ้ายไปขวา
+
+INSERT INTO customers (FirstName,LastName,Email)
+VALUES("Jiraphon","Someboonsuk","Kitty@gmail.com");ง่ายและนิยมใช้ ด้วยการกำหนดคอลัมแล้วใส่ข้อมูลตามที่กำหนด
+
 3.ตรวจผลลัพธ์
 
 การลบและการแก้ไข **** 2 คำสั่งนี้อันตรายมาก เพราะ ข้อมูลที่ลบไปไม่สามารถเรียกคืนมาได้ ****
-1. UPDATE ใช้สำหรับแก้ไขข้อมูลภายในตาราง
+1. UPDATE ใช้สำหรับแก้ไขข้อมูลภายในตาราง UPDATE SET WHERE มักจะมาพร้อมกัน
+UPDATE customers
+SET FirstName = "Kittisak" LastName = "Kittikorn"
+WHERE CustomerId = 61;
+
 2. DELETE ใช้ลบข้อมูลในตาราง 
+DELETE FROM customers
+WHERE CustomerId = 61;
 
 การค้นหาข้อมูลในตาราง
 1. SELECT ใช้ในการค้นหาข้อมูล SELECT *StuNum(คอลัม) FROM ชื่อ Table ถ้าผิดเช็ค FROM ก่อน
@@ -105,3 +118,28 @@ interval เก็บความต่างของเวลา
 array ใช้จัดเรียงข้อมูล
 multiset เก็บข้อมูลที่ไม่มีการจัดเรียงและอาจซ้ำกันได้
 xml เก็บไฟล์เอกสารประเภท xml 
+BLOB เอาไว้เก็บ รูปภาพ เสียง ไม่นิยมใช้แล้ว
+
+เอจิเกจ คำสั่ง TOOL ต่างๆที่ใช้ /// WHERE ไม่สามารถใช้กับ เอจิเกจ ได้เพราะ WHERE ไว้ใช้กับการเลือกค่าปกติเท่านั้น
+SELECT COUNT (FirstName)     COUNT การนับจำนวน
+FROM customers
+WHERE Country = "USA"; ตัวโปรแกรมจะนับจำนวนที่มีข้อมูลตามเงื่อนไขออกมาให้
+
+SELECT AVG (Total)      AVG เอาไว้หาค่าเฉลี่ย
+FROM invoices ; ตัวโปรแกรมจะหาค่าเฉลี่ยของช่องนั้นออกมาให้เป็นตัวเลข
+
+SELECT SUM (Total)	SUM บวกข้อมูล
+FROM invoices ; ตัวโปรแกรมจะนำข้อมูลทั้งหมดภายในคอลัมที่เลือกมาบวกแล้วแสดงผล
+
+SELECT MIN (Total) MIN หาตค่าต่ำสุด
+FROM invoices ;
+
+SELECT MIN (Total) MAX หาค่ามากสุด
+FROM invoices ;
+
+GROUP BY ใช้รวมข้อมูล 
+SELECT COUNT (CustomerId),City     COUNT (CustomerId) นับจากคอลัม ,City คอลัมมาด้วย
+FROM customers
+GROUP BY City คอลัมหลัก
+
+HAVING COUNT (CustomerId) >=5 ต้องใช้กับอจิเกจ เท่านั้นและต้องอยู่หลัง GROUP BY ถ้ามี
