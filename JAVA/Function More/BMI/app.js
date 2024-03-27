@@ -1,13 +1,25 @@
-const bmiobj = {
-    usere : [],
-    rateit(usere) {
-        if (usere){
-            this.usere.push(usere);
+const bmiarray = {
+    values: [],
+    input(values) {
+        if (values) {
+            this.values.push(parseFloat(values));
         }
-        const total = this.usere.reduce((x, y) => x +y);
-        console.log(total)
-        return total ;
+    },
+    SumBMI() {
+        if (this.values.length === 2) {
+            const weight = this.values[0];
+            const height = this.values[1];
+            const bmi = weight / ((height / 100) ** 2);
+            return bmi.toFixed(2);
+        } else {
+            return "อีสัสเอ้ยยยยยยยย";
+        }
     }
 };
-
-console.log(bmiobj.rateit(50));
+function HolyShit(){
+bmiarray.input(document.getElementById("weight").value);
+bmiarray.input(document.getElementById("height").value);
+const total = bmiarray.SumBMI();
+document.getElementById("output").value = total
+bmiarray.values = []
+}

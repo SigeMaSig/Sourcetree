@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sty.css">
     <title>Document</title>
 </head>
 <body>
-    <input id="input" type="text">
-    <button onclick='bmiobj.rateit(document.getElementById("input").value)'>รับข้อมูลไปโชว์ใน Console</button>
+<div>   
+<div class ="bloder"></div>
+<P class="texttop">โปรแกรมคำนวนค่า BMI</P>
+    <div id="input" >
+        <label class="weightlable">น้ำหนัก (กิโลกรัม)</label>
+        <input class="weightinput" type="number" id="weight" >
+        <label class="heightlable">ส่วนสูง (เซนติเมตร)</label>
+        <input class="heightinput" type="number" id="height" >
+    </div>
+
+    <div>
+        <label class="textlable">ผลลัพธ์</label>
+        <input class="totalinput" type="text" id="output" disabled>
+    </div>
+
+    <div>
+        <button class="summitbotton" onclick='HolyShit()'>ประมวลผล</button>
+    </div>
+</div> 
     <script src="app.js"></script>
 </body>
 </html>
