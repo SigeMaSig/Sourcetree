@@ -1,0 +1,10 @@
+คำสั่งของ nodejs 
+เริ่มด้วย npm เสมอ
+1. init จุดที่จะ Install node มาใช้
+2. install express คำสั่งเรียกเครื่องมือ
+  2.1 มีอย่างอื่นอีก
+3. install debug แนะนำให้เรียก
+4. คำสั่ง node app.js เป็นคำสั่งในการรันโปรแกรม
+5. env:DEBUG = "*"; nod
+e app.js การเรียกใช้ port แบบมี Debug
+Navbar แถบสี <nav> </nav>
