@@ -12,9 +12,9 @@
 <P class="texttop">โปรแกรมคำนวนค่า BMI</P>
     <div id="input" >
         <label class="weightlable">น้ำหนัก (กิโลกรัม)</label>
-        <input class="weightinput" type="number" id="weight" >
+        <input class="weightinput" type="number" id="weight" onkeypress="return checkInput(event)">
         <label class="heightlable">ส่วนสูง (เซนติเมตร)</label>
-        <input class="heightinput" type="number" id="height" >
+        <input class="heightinput" type="number" id="height" onkeypress="return checkInput(event)">
     </div>
 
     <div>
